@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>andrey kiva</title>
+	<link rel="shortcut icon" href="./icons/favicon.png" type="image/png">
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/media.css">
+	<link rel="stylesheet" href="./css/revealator.css">
+</head>
+
+<body class="about">
+	<header class="header">
+		<div class="container">
+			<div class="header__inner">
+				<nav class="menu">
+					<ul class="menu__list">
+						<li data-index="0" class="active js_nav_item js_about_link revealator-slideright"><a
+								href="#">About Me</a></li>
+						<li data-index="1" class="js_nav_item js_work_link revealator-slideleft"><a href="#">Work</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="menu__circle js_menu_circle">
+					<div class="menu__circle-dot revealator-slidedown"></div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="container">
+			<div class="page-about js_page_about hide">
+				<div class="page-about__profile">
+					<img src="./img/ava-black.png" alt="ava-black" class="page-about__profile-img">
+					<div class="profile__links">
+						<a href="mailto: anreyandreyk@gmail.com" class="profile-link" target="_blank">
+							<img src="./icons/email.svg" alt="email">
+						</a>
+						<a href="https://www.fiverr.com/andreykiva" class="profile-link" target="_blank">
+							<img src="./icons/fiverr.svg" alt="fiverr">
+						</a>
+						<a href="https://github.com/podmost777" class="profile-link" target="_blank">
+							<img src="./icons/github.svg" alt="github">
+						</a>
+					</div>
+				</div>
+
+				<div class="page-about__content">
+					<h2>Hey, my name is Andrey Kiva</h2>
+					<p> I started my programming journey in 2018, introducing HTML and CSS for the first time. During
+						this time, I tried a lot of things, from Chrome extensions and landing pages, to full-fledged
+						web applications on Nest JS and React JS. Every day I try to learn something new, moving forward
+						and overcoming difficulties along the way. I am here to help you with your projects and keep
+						improving. </p>
+				</div>
+			</div>
+			<div class="page-work js_page_work hide">
+				<div class="work__slider js_work__slider">
+					<div class="work__slider-counter">
+						<div class="work__slider-prev js_work__slider-prev">
+							<svg width="24px" height="24px" viewBox="0 0 24 24" fill="none">
+								<path
+									d="M9 15L9 17C9 17.961 7.77661 18.3688 7.2 17.6L3.45 12.6C3.18333 12.2444 3.18333 11.7556 3.45 11.4L7.2 6.4C7.77661 5.63119 9 6.03899 9 7L9 11C9 11.5523 9.44772 12 10 12L21 12"
+									stroke="rgb(59, 52, 163)" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+						<span id="current">03</span>
+						/
+						<span id="total">04</span>
+						<div class="work__slider-next js_work__slider-next">
+							<svg width="24px" height="24px" viewBox="0 0 24 24" fill="none">
+								<path
+									d="M15 15L15 17C15 17.961 16.2234 18.3688 16.8 17.6L20.55 12.6C20.8167 12.2444 20.8167 11.7556 20.55 11.4L16.8 6.4C16.2234 5.63119 15 6.03899 15 7L15 11C15 11.5523 14.5523 12 14 12L3 12"
+									stroke="rgb(59, 52, 163)" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+					</div>
+					<div class="work__slider-wrapper js_work__slider-wrapper">
+						<div class="work__slider-inner js_work__slider-inner">
+							<div class="work__slide js_work__slide">
+								<a href="./img/slider/slide01.png" target="_blank">
+									<img src="./img/slider/slide01.png" alt="slide01">
+								</a>
+							</div>
+							<div class="work__slide js_work__slide">
+								<a href="./img/slider/slide02.png" target="_blank">
+
+									<img src="./img/slider/slide02.png" alt="slide02">
+								</a>
+							</div>
+							<div class="work__slide js_work__slide">
+								<a href="./img/slider/slide03.png" target="_blank">
+
+									<img src="./img/slider/slide03.png" alt="slide03">
+								</a>
+							</div>
+							<div class="work__slide js_work__slide">
+								<a href="./img/slider/slide04.png" target="_blank">
+
+									<img src="./img/slider/slide04.png" alt="slide04">
+								</a>
+							</div>
+							<div class="work__slide js_work__slide">
+								<a href="./img/slider/slide05.png" target="_blank">
+
+									<img src="./img/slider/slide05.png" alt="slide05">
+								</a>
+							</div>
+							<div class="work__slide js_work__slide">
+								<a href="./img/slider/slide06.png" target="_blank">
+
+									<img src="./img/slider/slide06.png" alt="slide06">
+								</a>
+							</div>
+							<div class="work__slide js_work__slide">
+								<a href="./img/slider/slide07.png" target="_blank">
+
+									<img src="./img/slider/slide07.png" alt="slide07">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<div class="background__circles about__circles active show js_bg_circles_about">
+		<div class="background__circle"></div>
+		<div class="background__circle"></div>
+		<div class="background__circle"></div>
+	</div>
+
+	<div class="background__circles work__circles hide js_bg_circles_work">
+		<div class="background__circle"></div>
+		<div class="background__circle"></div>
+		<div class="background__circle"></div>
+	</div>
+
+	<script src="./js/revealator.js"></script>
+	<script src="./js/script.js"></script>
+</body>
+
+</html>

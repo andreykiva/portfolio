@@ -1,0 +1,361 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+/*--------------------------------------------------------------------------------------Fonts */
+
+@font-face {
+	font-family: 'AzeretMono Medium';
+	font-weight: normal;
+	src: url("../fonts/AzeretMono-Medium.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'AzeretMono Regular';
+	font-weight: normal;
+	src: url("../fonts/AzeretMono-Regular.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'AzeretMono Light';
+	font-weight: normal;
+	src: url("../fonts/AzeretMono-Light.woff") format("woff");
+}
+
+/*--------------------------------------------------------------------------------------Variables */
+
+:root {
+	--green-bg-color: rgb(105, 226, 135);
+	--blue-bg-color: rgb(135, 128, 233);
+	--yellow-bg-color: rgb(179, 168, 71);
+}
+
+/*--------------------------------------------------------------------------------------Main */
+
+body {
+	font-family: 'AzeretMono Regular';
+	cursor: url(../icons/cursor.png), default;
+}
+
+body.work {
+	background-color: var(--blue-bg-color);
+}
+
+body.about {
+	background-color: var(--green-bg-color);
+}
+
+a,
+a:active,
+a:link {
+	cursor: url(../icons/cursor.png), default;
+}
+
+.container {
+	max-width: 1230px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+/*--------------------------------------------------------------------------------------Header */
+
+.header__inner {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 180px;
+}
+
+.menu__list {
+	display: flex;
+}
+
+.menu__list li {
+	margin-right: 80px;
+}
+
+.menu__list li:last-child {
+	margin-right: 0;
+}
+
+.menu__list li.active a {
+	color: rgba(10, 15, 85, 0.699);
+}
+
+.menu__list li:hover a {
+	opacity: .8;
+}
+
+.menu__list li.active:hover a {
+	opacity: 1;
+}
+
+.menu__list a {
+	font-size: 14px;
+	color: #fff;
+	font-weight: 500;
+	text-decoration: none;
+	transition: color .4s, opacity .2s ease-in-out;
+}
+
+.menu__circle {
+	position: absolute;
+	width: 122px;
+	height: 122px;
+	display: flex;
+	align-items: center;
+	border-radius: 50%;
+	left: 75px;
+	bottom: 28px;
+	transition: transform .7s ease-in-out;
+	z-index: -1;
+}
+
+.menu__circle.rotated {
+	transform: rotate(540deg);
+}
+
+.menu__circle-dot {
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background-color: rgba(218, 26, 26, 0.897);
+}
+
+/*--------------------------------------------------------------------------------------Background */
+
+.background__circles {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -10;
+}
+
+.background__circles.about__circles .background__circle {
+	background-color: var(--green-bg-color);
+}
+
+.background__circles.work__circles .background__circle {
+	background-color: var(--blue-bg-color);
+}
+
+.background__circle:nth-child(1) {
+	position: absolute;
+	left: 10%;
+	top: 60%;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	transform: scale(0);
+	transition: transform .4s ease-in-out;
+}
+
+.background__circle:nth-child(2) {
+	position: absolute;
+	left: 50%;
+	top: 35%;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	transform: scale(0);
+	transition: transform .7s ease-in-out;
+}
+
+.background__circle:nth-child(3) {
+	position: absolute;
+	right: 10%;
+	bottom: 35%;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	transform: scale(0);
+	transition: transform .5s ease-in-out;
+}
+
+.background__circles.active .background__circle {
+	transform: scale(2.5);
+}
+
+.background__circles.show {
+	z-index: -20;
+}
+
+.background__circles.show .background__circle {
+	transform: scale(15);
+}
+
+.background__circles.hide .background__circle {
+	transform: scale(0);
+	transition: transform .0s ease-in-out;
+}
+
+/*--------------------------------------------------------------------------------------Main About Me */
+
+.page-about {
+	transition: transform .4s ease-in-out;
+	display: flex;
+	padding-top: 120px;
+	max-width: 1230px;
+	position: absolute;
+}
+
+.page-about.hide {
+	transform: scale(0);
+}
+
+.page-about__profile {
+	margin-right: 120px;
+}
+
+.page-about__profile-img {
+	display: block;
+	width: 200px;
+	border-radius: 50%;
+	margin-bottom: 25px;
+}
+
+.profile__links {
+	display: flex;
+	justify-content: center;
+}
+
+.page-about__profile .profile-link {
+	text-decoration: none;
+	margin: 0 15px;
+	opacity: .6;
+	cursor: url(../icons/cursor-pointer.png), default;
+	transition: opacity .2s ease-in-out;
+}
+
+.page-about__profile .profile-link:hover {
+	opacity: .8;
+}
+
+.page-about__profile .profile-link img {
+	width: 30px;
+}
+
+.page-about__content {
+	font-size: 30px;
+}
+
+.page-about__content p {
+	margin-top: 30px;
+	font-size: 22px;
+	line-height: 1.4;
+}
+
+/*--------------------------------------------------------------------------------------Main work */
+
+.page-work {
+	display: flex;
+	justify-content: center;
+	transition: transform .4s ease-in-out;
+}
+
+.page-work.hide {
+	transform: scale(0);
+}
+
+.work__slider {
+	width: 1100px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.work__slider-counter {
+	display: flex;
+	width: 180px;
+	align-items: center;
+	font-size: 24px;
+	color: rgb(59, 52, 163);
+	z-index: 25;
+}
+
+.work__slider-wrapper {
+	width: 100%;
+	margin-top: 15px;
+	border-radius: 20px;
+	box-shadow: 0px 0px 50px 25px rgb(88, 79, 212);
+}
+
+.work__slider-prev {
+	margin-right: 10px;
+	cursor: url(../icons/cursor-pointer.png), default;
+}
+
+.work__slider-prev svg path {
+	transition: stroke .2s ease-in-out;
+}
+
+.work__slider-prev:hover svg path {
+	stroke: rgb(30, 25, 100);
+}
+
+.work__slider-next {
+	margin-left: 10px;
+	cursor: url(../icons/cursor-pointer.png), default;
+}
+
+.work__slider-next svg path {
+	transition: stroke .2s ease-in-out;
+}
+
+.work__slider-next:hover svg path {
+	stroke: rgb(30, 25, 100);
+}
+
+.work__slider #current {
+	font-size: 48px;
+	font-weight: 700;
+	color: rgb(24, 18, 107);
+}
+
+.work__slide {
+	width: 100%;
+	height: 537px;
+}
+
+.work__slide a {
+	text-decoration: none;
+	cursor: url(../icons/cursor-pointer.png), default;
+}
+
+.work__slide img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.carousel-indicators {
+	position: absolute;
+	right: 0;
+	bottom: -50px;
+	left: 0;
+	z-index: 15;
+	display: flex;
+	justify-content: center;
+	margin-right: 15%;
+	margin-left: 15%;
+	list-style: none;
+}
+
+.dot {
+	width: 16px;
+	height: 16px;
+	cursor: url(../icons/cursor-pointer.png), default;
+	border: 2px solid rgb(68, 59, 187);
+	border-radius: 50%;
+	margin: 0 3px;
+	opacity: .5;
+}
